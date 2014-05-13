@@ -71,6 +71,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\CTS_AppControllers.js" />
+    <Content Include="Scripts\CTS_AppRouters.js" />
     <Content Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
     <Content Include="Views\Ajout.aspx" />
@@ -130,6 +131,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\CTS-App.Master" />
+    <Content Include="Content\font\HelveticaLTStd-Cond.otf" />
+    <Content Include="Content\font\HelveticaBQ-Light.otf" />
+    <Content Include="Content\font\HelveticaBQ-UltraLight.otf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

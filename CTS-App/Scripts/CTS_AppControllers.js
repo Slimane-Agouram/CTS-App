@@ -9,3 +9,7 @@ CTS_AppControllers.controller('DiagnosticController', ['$scope', function($scope
     $scope.vehicules = vehicules;
 }]);
 
+CTS_AppControllers.controller('ResultatsController', ['$scope', function($scope) {
+    var results = [];
+    $scope.results = results;
+}])
