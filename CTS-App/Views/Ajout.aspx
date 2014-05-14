@@ -46,7 +46,7 @@
                 <tr>
                     <td>&nbsp;</td>
                     <td>
-                        <asp:Button ID="ValiderButton" runat="server" Text="Valider" CssClass="btn btn-default" OnClick="ValiderButton_Click" />
+                        <asp:Button ID="ValiderButton" runat="server" Text="Valider" CssClass="btn btn-success" OnClick="ValiderButton_Click" />
                     </td>
                 </tr>
             </table>

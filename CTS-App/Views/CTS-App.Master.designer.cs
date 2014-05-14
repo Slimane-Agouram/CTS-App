@@ -22,13 +22,13 @@ namespace CTS_App {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
         
         /// <summary>
-        /// ToolkitScriptManager1 control.
+        /// ToolkitScriptManagerApp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ToolkitScriptManager ToolkitScriptManager1;
+        protected global::AjaxControlToolkit.ToolkitScriptManager ToolkitScriptManagerApp;
         
         /// <summary>
         /// ContentPlaceHolder1 control.

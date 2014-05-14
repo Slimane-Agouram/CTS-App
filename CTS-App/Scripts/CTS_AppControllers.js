@@ -1,4 +1,4 @@
-﻿var CTS_AppControllers = angular.module('CTS_AppControllers', []);
+﻿var CTS_AppControllers = angular.module('CTS_AppControllers', ['ui.bootstrap']);
 CTS_AppControllers.controller('AjoutFichierController', ['$scope', function($scope) {
     var fichiers = [{ id: 10, nom: 'Slimane' }, { id: 12 , nom: 'Youssef' }, { id: 13 , nom:'Spoofy' }];
     $scope.fichiers = fichiers;

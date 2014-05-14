@@ -40,7 +40,7 @@
     </div>
     <div class="container">
         <form runat="server">
-                <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></asp:ToolkitScriptManager>
+                <asp:ToolkitScriptManager ID="ToolkitScriptManagerApp" runat="server"></asp:ToolkitScriptManager>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" >
         
         </asp:ContentPlaceHolder>
@@ -53,6 +53,7 @@
     <script src="../Scripts/app.js" type="text/javascript"></script>
     <script src="../Scripts/CTS_AppControllers.js" type="text/javascript"></script>
 <%--    <script src="../Scripts/angular.min.js" type="text/javascript"></script>--%>
+    <script src="../Scripts/ui-bootstrap-tpls-0.11.0.min.js" type="text/javascript"></script>
 
 
 
