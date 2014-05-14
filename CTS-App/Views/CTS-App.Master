@@ -10,6 +10,8 @@
     <link href="../Content/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="../Content/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
     <link href="../Content/css/Ajout.css" rel="stylesheet" type="text/css"/>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
 
 
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -25,7 +27,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="www.cts.fr">CTS-App</a>
+          <a class="navbar-brand" href="www.cts.fr"><i class="fa fa-briefcase"></i> CTS-App</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">

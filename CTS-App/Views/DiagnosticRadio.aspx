@@ -16,14 +16,14 @@
         
         <table class="table table-striped" >
             <tr>
-                <td>Ligne:</td>
+                <td><i class="fa fa-truck"></i> Ligne:</td>
                 <td>
                     <asp:DropDownList ID="DropDownListLigne" runat="server">
                     </asp:DropDownList>
                 </td>
             </tr>
             <tr>
-                <td>Qualité Radio:</td>
+                <td><i class="fa fa-tachometer"></i> Qualité Radio:</td>
                 <td>
                     <asp:DropDownList ID="DropDownListQuality" runat="server">
                     </asp:DropDownList>
@@ -31,7 +31,7 @@
             </tr>
             <tr>
                 <td>
-                    Date début - fin
+                   <i class="fa fa-calendar-o"></i> Date début - fin
                 </td>
               <td>
                         
@@ -43,7 +43,7 @@
                   <asp:CalendarExtender ID="CalendarExtenderDebut" runat="server" TargetControlID="TextBoxDateDebut" Format="dd/MM/yyyy"></asp:CalendarExtender>
             </tr>
             <tr>
-                <td class="auto-style1">Vehicule:</td>
+                <td class="auto-style1"><i class="fa fa-search"></i> Vehicule:</td>
                 <td class="auto-style1">
                     <asp:TextBox ID="TextBoxVehicule" CssClass="col-sm-2 control-label" runat="server" ng-model="reference"  ></asp:TextBox>
                 </td>

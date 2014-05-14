@@ -27,14 +27,14 @@
 
             <table class="nav-justified">
                 <tr>
-                    <td>Type de fichier:</td>
+                    <td><i class="fa fa-file"></i> Type de fichier:</td>
                     <td>
                         <asp:DropDownList ID="DropDownListTypeFichier" runat="server">
                         </asp:DropDownList>
                     </td>
                 </tr>
                 <tr>
-                    <td>Parcourir le fichier:</td>
+                    <td><i class="fa fa-upload"></i> Parcourir le fichier:</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
