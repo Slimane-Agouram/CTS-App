@@ -35,6 +35,8 @@
             <li><a href="DiagnosticRadio.aspx">Diagnostic Radio</a></li>
             <li><a href="AnomalieConnexion.aspx">Anomalie de Connexion</a></li>
             <li><a href="Resultat.aspx">Résultats</a></li>
+            <li><a href="Resultat.aspx">Documentation</a></li>
+
 
           </ul>
         </div><!--/.nav-collapse -->

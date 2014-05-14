@@ -78,6 +78,7 @@
     <Content Include="Views\Ajout.aspx" />
     <Content Include="Views\AnomalieConnexion.aspx" />
     <Content Include="Views\DiagnosticRadio.aspx" />
+    <Content Include="Views\Doc.aspx" />
     <Content Include="Views\Resultat.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -117,6 +118,13 @@
     </Compile>
     <Compile Include="Views\DiagnosticRadio.aspx.designer.cs">
       <DependentUpon>DiagnosticRadio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Doc.aspx.cs">
+      <DependentUpon>Doc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Doc.aspx.designer.cs">
+      <DependentUpon>Doc.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Resultat.aspx.cs">
       <DependentUpon>Resultat.aspx</DependentUpon>
