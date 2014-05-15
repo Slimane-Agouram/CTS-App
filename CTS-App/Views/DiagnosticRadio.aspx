@@ -45,7 +45,7 @@
             <tr>
                 <td class="auto-style1"><i class="fa fa-search"></i> Vehicule:</td>
                 <td class="auto-style1">
-                    <asp:TextBox ID="TextBoxVehicule" CssClass="col-sm-2 control-label" runat="server" ng-model="reference"  ></asp:TextBox>
+                    <asp:TextBox ID="TextBoxVehicule" CssClass="col-sm-2 control-label" runat="server" ng-model="reference" OnTextChanged="TextBoxVehicule_TextChanged" EnableViewState="False" ></asp:TextBox>
                 </td>
             </tr>
             
@@ -53,13 +53,21 @@
                 <td>
                     <asp:Button ID="ButtonSubmit" runat="server" Text="Valider" CssClass="btn btn-primary" />
                 </td>
-                <td><div id="listeVehicule" data-ng-repeat="vehicule in vehicules|filter:reference">
-                        
-                    
-                    <a href="#"> Vehicule:{{vehicule.ref}}</a>
-                    
-                   
-                    </div></td>
+                <td>
+<%--                    <div id="listeVehicule" data-ng-repeat="vehicule in vehicules|filter:reference">--%>
+<%--                        --%>
+<%--                    --%>
+<%--                    <a href="#"> Vehicule:{{vehicule.ref}}</a>--%>
+<%--                    --%>
+<%--                   --%>
+<%--                    </div>--%>
+
+
+                    <asp:GridView ID="GridViewVehicules" runat="server" CssClass="table-striped table-responsive table-hover">
+                    </asp:GridView>
+
+
+                </td>
             </tr>
         </table>
         

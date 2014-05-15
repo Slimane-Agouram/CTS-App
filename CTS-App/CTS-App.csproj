@@ -83,6 +83,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\MyModel.cs" />
     <Compile Include="Views\CTS-App.Master.cs">
       <DependentUpon>CTS-App.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
