@@ -24,7 +24,10 @@
 <%--            <br />--%>
 <%--                </div>--%>
 <%--                </div>--%>
-
+        
+                <div class="jumbotron label-info">
+        <div id="titre" class="container"> <h2>Ajouter un fichier:</h2></div>
+            </div>
             <table class="nav-justified">
                 <tr>
                     <td><i class="fa fa-file"></i> Type de fichier:</td>

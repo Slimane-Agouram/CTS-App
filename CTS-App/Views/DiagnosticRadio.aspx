@@ -13,7 +13,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" >
 
     <div id="diagnostic" style=" padding-top: 30px; margin-top: 30px;" data-ng-app="DiagnosticApp" data-ng-controller="DiagnosticController">
-        
+        <div class="jumbotron label-info">
+        <div id="titre" class="container"> <h2>Diagnostique Radio:</h2></div>
+            </div>
         <table class="table table-striped" >
             <tr>
                 <td><i class="fa fa-truck"></i> Ligne:</td>

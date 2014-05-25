@@ -13,6 +13,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
     <div id="Anomalies" style="padding-top: 30px; margin-top: 30px;">
+                <div class="jumbotron label-info">
+        <div id="titre" class="container"> <h2>Anomalie de connexion:</h2></div>
+            </div>
     <table class="table table-striped">
         <tr>
             <td class="auto-style2"><i class="fa fa-truck"></i> Vehicule&nbsp;</td>
