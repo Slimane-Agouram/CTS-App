@@ -75,6 +75,7 @@
     <Content Include="Scripts\app.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Chart.js" />
     <Content Include="Scripts\CTS_AppControllers.js" />
     <Content Include="Scripts\CTS_AppRouters.js" />
     <Content Include="Scripts\jquery-1.7.1.intellisense.js" />

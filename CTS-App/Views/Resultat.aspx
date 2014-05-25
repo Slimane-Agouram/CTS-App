@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="CTS-App.Master" AutoEventWireup="true" CodeBehind="Resultat.aspx.cs" Inherits="CTS_App.Views.Resultat" %>
 <%@ Register TagPrefix="asp" Namespace="AjaxControlToolkit" Assembly="AjaxControlToolkit, Version=3.5.7.1213, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" >
     <br/>
@@ -30,10 +31,41 @@
                   <div class="tab-pane active" id="carte">
 <%--                        <div class="loader">Loading...</div>--%>
 </div>
-                  <div class="tab-pane" id="graphe">medium-first</div>
+                  <div class="tab-pane" id="graphe">
+                      <canvas id="myChart" width="800" height="400"></canvas>
+          <script>
+              var data = {
+                  labels: ["January", "February", "March", "April", "May", "June", "July"],
+                  datasets: [
+                      {
+                          fillColor: "rgba(220,220,220,0.5)",
+                          strokeColor: "rgba(220,220,220,1)",
+                          pointColor: "rgba(220,220,220,1)",
+                          pointStrokeColor: "#fff",
+                          data: [65, 59, 90, 81, 56, 55, 40]
+                      },
+                      {
+                          fillColor: "rgba(151,187,205,0.5)",
+                          strokeColor: "rgba(151,187,205,1)",
+                          pointColor: "rgba(151,187,205,1)",
+                          pointStrokeColor: "#fff",
+                          data: [28, 48, 40, 19, 96, 27, 100]
+                      }
+                  ]
+              };
+
+              var ctx = $("#myChart").get(0).getContext("2d");
+              //This will get the first returned node in the jQuery collection.
+              var myNewChart = new Chart(ctx).Line(data);
+            </script>
+                  </div>
                   <div class="tab-pane" id="stat">medium</div>
                </div>
 
+        </div>
+        <div class="col-md-12">
+              
+            
         </div>
 <%--        <div class="col-md-12">--%>
 <%--<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="return false;">--%>
