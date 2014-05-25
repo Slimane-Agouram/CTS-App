@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="CTS-App.Master" AutoEventWireup="true" CodeBehind="Resultat.aspx.cs" Inherits="CTS_App.Views.Resultat" %>
 <%@ Register TagPrefix="asp" Namespace="AjaxControlToolkit" Assembly="AjaxControlToolkit, Version=3.5.7.1213, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" >
     <br/>
@@ -30,6 +29,96 @@
                 <div class="tab-content">
                   <div class="tab-pane active" id="carte">
 <%--                        <div class="loader">Loading...</div>--%>
+                      <div id="gmap-dropdown"></div>
+                      <div id="gmap-list"></div>
+                      <script>
+                          var LocsA = [
+                              {
+                                  lat: 45.9,
+                                  lon: 10.9,
+                                  title: 'Title A1',
+                                  html: '<h3>Content A1</h3>',
+                                  icon: 'http://maps.google.com/mapfiles/markerA.png'
+                              },
+                              {
+                                  lat: 44.8,
+                                  lon: 1.7,
+                                  title: 'Title B1',
+                                  html: '<h3>Content B1</h3>',
+                                  icon: 'http://maps.google.com/mapfiles/markerB.png',
+                                  show_infowindow: false
+                              },
+                              {
+                                  lat: 51.5,
+                                  lon: -1.1,
+                                  title: 'Title C1',
+                                  html: [
+                                      '<h3>Content C1</h3>',
+                                      '<p>Lorem Ipsum..</p>'
+                                  ].join(''),
+                                  icon: 'http://maps.google.com/mapfiles/markerC.png'
+                              }
+                          ];
+
+                          var LocsB = [
+                              {
+                                  lat: 52.1,
+                                  lon: 11.3,
+                                  title: 'Title A2',
+                                  html: [
+                                      '<h3>Content A2</h3>',
+                                      '<p>Lorem Ipsum..</p>'
+                                  ].join(''),
+                                  zoom: 8
+                              },
+                              {
+                                  lat: 51.2,
+                                  lon: 22.2,
+                                  title: 'Title B2',
+                                  html: [
+                                      '<h3>Content B2</h3>',
+                                      '<p>Lorem Ipsum..</p>'
+                                  ].join(''),
+                                  zoom: 8
+                              },
+                              {
+                                  lat: 49.4,
+                                  lon: 35.9,
+                                  title: 'Title C2',
+                                  html: [
+                                      '<h3>Content C2</h3>',
+                                      '<p>Lorem Ipsum..</p>'
+                                  ].join(''),
+                                  zoom: 4
+                              },
+                              {
+                                  lat: 47.8,
+                                  lon: 15.6,
+                                  title: 'Title D2',
+                                  html: [
+                                      '<h3>Content D2</h3>',
+                                      '<p>Lorem Ipsum..</p>'
+                                  ].join(''),
+                                  zoom: 6
+                              }
+                          ];
+
+                          
+                          new Maplace({
+                              locations: LocsA,
+                              map_div: '#gmap-dropdown',
+                              controls_title: 'Choose a location:'
+                          }).Load();
+
+                          //ul list example
+                          new Maplace({
+                              locations: LocsB,
+                              map_div: '#gmap-list',
+                              controls_type: 'list',
+                              controls_title: 'Choose a location:'
+                          }).Load();
+                      </script>
+
 </div>
                   <div class="tab-pane" id="graphe">
                       <canvas id="myChart" width="800" height="400"></canvas>
@@ -57,9 +146,27 @@
               var ctx = $("#myChart").get(0).getContext("2d");
               //This will get the first returned node in the jQuery collection.
               var myNewChart = new Chart(ctx).Line(data);
-            </script>
+          </script>
+                      
                   </div>
-                  <div class="tab-pane" id="stat">medium</div>
+                  <div class="tab-pane" id="stat">
+                     
+                      <div class="grapheCircle" id="grapheCircle" style="padding-top: 50px;
+    align-content: center; padding-left: 150px;">
+                         <script>
+                        Circles.create({
+                id: 'grapheCircle',
+                percentage: 43,
+                radius: 60,
+                width: 10,
+                number: 7.13,
+                text: '%',
+                colors: ['#D3B6C6', '#4B253A'],
+                duration: 400
+            });
+                    </script>
+                  </div>
+                    
                </div>
 
         </div>
