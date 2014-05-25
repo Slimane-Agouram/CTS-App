@@ -1,9 +1,0 @@
-C:\Users\slimane\Documents\Visual Studio 2013\Projects\CTS-App\CTS-App\bin\CTS-App.dll.config
-C:\Users\slimane\Documents\Visual Studio 2013\Projects\CTS-App\CTS-App\bin\CTS-App.dll
-C:\Users\slimane\Documents\Visual Studio 2013\Projects\CTS-App\CTS-App\bin\CTS-App.pdb
-C:\Users\slimane\Documents\Visual Studio 2013\Projects\CTS-App\CTS-App\bin\AjaxMin.dll
-C:\Users\slimane\Documents\Visual Studio 2013\Projects\CTS-App\CTS-App\obj\Debug\CTS-App.csprojResolveAssemblyReference.cache
-C:\Users\slimane\Documents\Visual Studio 2013\Projects\CTS-App\CTS-App\obj\Debug\CTS-App.dll
-C:\Users\slimane\Documents\Visual Studio 2013\Projects\CTS-App\CTS-App\obj\Debug\CTS-App.pdb
-C:\Users\slimane\Documents\Visual Studio 2013\Projects\CTS-App\CTS-App\bin\Newtonsoft.Json.dll
-C:\Users\slimane\Documents\Visual Studio 2013\Projects\CTS-App\CTS-App\bin\Newtonsoft.Json.xml

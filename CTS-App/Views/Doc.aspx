@@ -1,12 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/CTS-App.Master" AutoEventWireup="true" CodeBehind="Doc.aspx.cs" Inherits="CTS_App.Views.Doc" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="../Content/css/doc.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="cont-doc">
+    <br/>
+    <br/>
+    <br/>
     <div class="container">
                 <div class="jumbotron">
                     <h2>Documentation:</h2>
+                    </div>
+        <div class="jumbotron">
         <div id="titre" class="container">
              <div class="col-md-4">
                         here
@@ -21,6 +24,6 @@
         </div>
                    
             </div>
-    </div>
         </div>
+
 </asp:Content>
