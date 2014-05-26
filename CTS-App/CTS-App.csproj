@@ -13,12 +13,14 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CTS_App</RootNamespace>
     <AssemblyName>CTS-App</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,22 +48,42 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Referenced\AjaxMin.dll</HintPath>
     </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net35\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel.Routing" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\css\Ajout.css" />
@@ -69,8 +91,11 @@
     <Content Include="Content\css\bootstrap-theme.min.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\daterangepicker-bs3.css" />
-    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="Referenced\AjaxMin.dll" />
+    <Content Include="Scripts\angular-charts.js" />
+    <Content Include="Scripts\angular-google-maps.js" />
+    <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\app.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -79,34 +104,40 @@
     <Content Include="Scripts\circles.js" />
     <Content Include="Scripts\CTS_AppControllers.js" />
     <Content Include="Scripts\CTS_AppRouters.js" />
+    <Content Include="Scripts\d3.js" />
+    <Content Include="Scripts\event.js" />
     <Content Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
     <Content Include="Scripts\maplace.js" />
     <Content Include="Scripts\moment.min.js" />
     <Content Include="Scripts\MyScript.js" />
+    <Content Include="Scripts\ng-map.js" />
     <Content Include="Scripts\ui-bootstrap-tpls-0.11.0.min.js" />
+    <Content Include="Scripts\ui-map.js" />
+    <Content Include="Scripts\underscore.js" />
     <Content Include="Views\Ajout.aspx" />
     <Content Include="Views\AnomalieConnexion.aspx" />
     <Content Include="Views\DiagnosticRadio.aspx" />
     <Content Include="Views\Doc.aspx" />
+    <Content Include="Views\MapDetails.aspx" />
+    <Content Include="Views\MapPage.aspx" />
     <Content Include="Views\Resultat.aspx" />
+    <Content Include="Views\testMap.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\MyModel.cs" />
+    <Compile Include="CTSController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Rootobject.cs" />
+    <Compile Include="Models\ResultGraph.cs" />
     <Compile Include="Views\CTS-App.Master.cs">
       <DependentUpon>CTS-App.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\CTS-App.Master.designer.cs">
       <DependentUpon>CTS-App.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Default.aspx.cs">
-      <SubType>ASPXCodeBehind</SubType>
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\Ajout.aspx.cs">
@@ -136,6 +167,20 @@
     </Compile>
     <Compile Include="Views\Doc.aspx.designer.cs">
       <DependentUpon>Doc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MapDetails.aspx.cs">
+      <DependentUpon>MapDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\MapDetails.aspx.designer.cs">
+      <DependentUpon>MapDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MapPage.aspx.cs">
+      <DependentUpon>MapPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\MapPage.aspx.designer.cs">
+      <DependentUpon>MapPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Resultat.aspx.cs">
       <DependentUpon>Resultat.aspx</DependentUpon>
@@ -177,7 +222,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>2368</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:2368/</IISUrl>
+          <IISUrl>http://localhost:2369/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

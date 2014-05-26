@@ -7,12 +7,11 @@
             height: 20px;
         }
     </style>
-      <script src="../Scripts/angular.min.js" type="text/javascript"></script>
-    <script src="../Scripts/CTS_AppControllers.js" type="text/javascript"></script>
+      
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" >
 
-    <div id="diagnostic" style=" padding-top: 30px; margin-top: 30px;" data-ng-app="DiagnosticApp" data-ng-controller="DiagnosticController">
+    <div id="diagnostic" style=" padding-top: 30px; margin-top: 30px;" >
         <div class="jumbotron label-info">
         <div id="titre" class="container"> <h2>Diagnostique Radio:</h2></div>
             </div>
@@ -47,7 +46,7 @@
             <tr>
                 <td class="auto-style1"><i class="fa fa-search"></i> Vehicule:</td>
                 <td class="auto-style1">
-                    <asp:TextBox ID="TextBoxVehicule" CssClass="col-sm-2 control-label" runat="server" ng-model="reference" OnTextChanged="TextBoxVehicule_TextChanged" EnableViewState="False" ></asp:TextBox>
+                    <asp:TextBox ID="TextBoxVehicule" CssClass="col-sm-2 control-label" runat="server"  OnTextChanged="TextBoxVehicule_TextChanged" EnableViewState="False" ></asp:TextBox>
                 </td>
             </tr>
             

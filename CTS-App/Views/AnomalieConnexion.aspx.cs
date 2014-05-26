@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Web;
+using System.Web.Services.Description;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
@@ -13,7 +14,7 @@ namespace CTS_App.Views
 {
     public partial class AnomalieConnexion : System.Web.UI.Page
     {
-        List<MyModel> test = new List<MyModel>();
+        List<Rootobject> test = new List<Rootobject>();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -31,10 +32,10 @@ namespace CTS_App.Views
 //            test
             for (int i = 0; i < 11; i++)
             {
-                MyModel temp = new MyModel();
-                temp.ID = i.ToString();
-                temp.Ref = 2 * i + 1;
-                test.Add(temp);
+//                MyModel temp = new MyModel();
+//                temp.ID = i.ToString();
+//                temp.Ref = 2 * i + 1;
+//                test.Add(temp);
             }
 
         }
@@ -62,7 +63,7 @@ namespace CTS_App.Views
             }
         }
 
-        protected void GetAnomalies(List<MyModel> maliste)
+        protected void GetAnomalies(List<Rootobject> maliste)
         {
 //            List<>
         }
@@ -123,6 +124,7 @@ namespace CTS_App.Views
                     row.BackColor = Color.White;
                     foreach (TableCell cell in row.Cells)
                     {
+//                        Console.log()
                         if (row.RowIndex % 2 == 0)
                         {
                             cell.BackColor = GridViewAnomalies.AlternatingRowStyle.BackColor;

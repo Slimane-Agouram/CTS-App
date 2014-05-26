@@ -1,8 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="CTS-App.Master" AutoEventWireup="true" CodeBehind="Ajout.aspx.cs" Inherits="CTS_App.Views.Ajout" %>
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-  <script src="../Scripts/angular.min.js" type="text/javascript"></script>
-    <script src="../Scripts/CTS_AppControllers.js" type="text/javascript"></script>
 
     <style type="text/css">
         #te {
@@ -17,13 +15,8 @@
     <br/>
     <br/> 
     
-    <div id="test" data-ng-app="AjoutApp" class="container">
-<%--        <input type="text" data-ng-model="nom"/>--%>
-<%--    <div data-ng-controller="AjoutFichierController" class="container" >--%>
-<%--        <div id="te" data-ng-repeat ="fi in fichiers|filter:nom" class=""> fichier: {{fi.id}} - Nom: {{fi.nom}}<br />--%>
-<%--            <br />--%>
-<%--                </div>--%>
-<%--                </div>--%>
+    <div id="test"  class="container">
+
         
                 <div class="jumbotron label-info">
         <div id="titre" class="container"> <h2>Ajouter un fichier:</h2></div>

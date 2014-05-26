@@ -11,7 +11,7 @@ namespace CTS_App.Views
 {
     public partial class DiagnosticRadio : System.Web.UI.Page
     {
-        List<MyModel> test = new List<MyModel>();
+        List<Rootobject> test = new List<Rootobject>();
 
         public List<string> definirListeLignes()
         {
@@ -45,10 +45,10 @@ namespace CTS_App.Views
 //            test
             for (int i = 0; i < 11; i++)
             {
-                MyModel temp = new MyModel();
-                temp.ID = i.ToString();
-                temp.Ref = 2 * i + 1;
-                test.Add(temp);
+//                MyModel temp = new MyModel();
+//                temp.ID = i.ToString();
+//                temp.Ref = 2 * i + 1;
+//                test.Add(temp);
             }
             
             GridViewVehicules.DataSource = test;
@@ -85,18 +85,18 @@ namespace CTS_App.Views
 
         protected void TextBoxVehicule_TextChanged(object sender, EventArgs e)
         {
-            List<MyModel> liste = new List<MyModel>();
-            String predicat = TextBoxVehicule.Text;
-            foreach (MyModel m in test )
-            {
-                if (m.ID.Contains(predicat))
-                {
-                    liste.Add(m);
-
-                }
-            }
-            GridViewVehicules.DataSource = liste;
-            GridViewVehicules.DataBind();
+//            List<MyModel> liste = new List<MyModel>();
+//            String predicat = TextBoxVehicule.Text;
+//            foreach (MyModel m in test )
+//            {
+//                if (m.ID.Contains(predicat))
+//                {
+//                    liste.Add(m);
+//
+//                }
+//            }
+//            GridViewVehicules.DataSource = liste;
+//            GridViewVehicules.DataBind();
 
         }
     }

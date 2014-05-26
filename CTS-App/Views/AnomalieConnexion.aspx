@@ -43,7 +43,7 @@
             <td class="auto-style1"><asp:GridView runat="server" ID="GridViewAnomalies" CssClass="table-hover table-responsive"></asp:GridView></td>
         </tr>
         <tr>
-            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style2"></td>
             <td class="auto-style1">&nbsp;</td>
         </tr>
     </table>
