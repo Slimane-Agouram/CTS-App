@@ -10,8 +10,8 @@ var Myapp = angular.module('app.ui-map', ['ui.map']);
       
 
       $scope.mapOptions = {
-          center: new google.maps.LatLng(35.784, -78.670),
-          zoom: 15,
+          center: new google.maps.LatLng(48.538, 7.750),
+          zoom: 11,
           mapTypeId: google.maps.MapTypeId.ROADMAP
       };
 
