@@ -18,14 +18,18 @@
 
      <script src="../Scripts/jquery-2.1.1.min.js" type="text/javascript"></script>
     <script src="../Scripts/angular.js"></script>
-    <script src="../Scripts/ng-map.js"></script>
+        <script src="../Scripts/event.js"></script>
+                <script src="../Scripts/ui-map.js"></script>
+
+<%--    <script src="../Scripts/ng-map.js"></script>--%>
     <script src="../Scripts/d3.js"></script>
+<%--    <script src="../Scripts/underscore.js"></script>--%>
+<%--    <script src="../Scripts/angular-google-maps.js"></script>--%>
+
     <script src="../Scripts/angular-charts.js"></script>    
 <%--    <script src="../Scripts/Chart.js"></script>--%>
-    <script src="../Scripts/event.js"></script>
-    <script src="../Scripts/underscore.js"></script>
 <%--        <script src="../Scripts/angular-google-maps.js"></script>--%>
-            <script src="../Scripts/ui-map.js"></script>
+<%--            <script src="../Scripts/ui-map.js"></script>--%>
           <script src="../Scripts/CTS_AppControllers.js"></script>
             <script src="../Scripts/app.js"></script>
 

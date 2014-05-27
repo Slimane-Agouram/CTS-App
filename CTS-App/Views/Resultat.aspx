@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="CTS-App.Master" AutoEventWireup="true" CodeBehind="Resultat.aspx.cs" Inherits="CTS_App.Views.Resultat" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="CTS-App.Master" AutoEventWireup="true" CodeBehind="Resultat.aspx.cs" Inherits="CTS_App.Views.Resultat" EnableEventValidation="false"%>
 <%@ Register TagPrefix="asp" Namespace="AjaxControlToolkit" Assembly="AjaxControlToolkit, Version=3.5.7.1213, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../Content/css/all.css" rel="stylesheet" />
@@ -20,7 +20,7 @@
     <div id="cont-res" class="container" data-ng-app="ResultatsApp" data-ng-controller="ResultatController"  >
         <div class="col-md-4">
             <div class="col-md-2">Ligne:<br/>Vehicule:<br/><br/><br/> Période:<br/> de: <br/>à:</div>
-            <div class="col-md-2"><asp:DropDownList runat="server" ID="DropdownListLigne" ng-model="ligne" /><br/>
+            <div class="col-md-2"><asp:DropDownList runat="server" ID="DropdownListLigne" ng-model="ligne" OnSelectedIndexChanged="DropdownListLigne_SelectedIndexChanged" /><br/>
                 <asp:DropDownList runat="server" ID="DropdownListVehicule" ng-model="vehicule"></asp:DropDownList><br/><br/><br/><i class="fa fa-calendar"></i>
                 <br/><asp:TextBox runat="server" ID="TextBoxDateDebut" ng-model="dateDebut" ></asp:TextBox>
                 <br/><asp:TextBox runat="server" ID="TextBoxDateFin" ng-model="dateFin"></asp:TextBox>
@@ -35,8 +35,6 @@
 <%--                  <li><a href="#graphe" data-toggle="tab">Graphe</a></li>--%>
                   <li><a href="#Gmap" data-toggle="tab">Cartographie</a></li>
             </ul>
-<%--            <button ng-click="sendRecieve()" class="btn btn-primary" onclick="return false;">recieve shit</button>--%>
-                <!-- Tab panes -->
                 <div class="tab-content">
 
                   <div class="tab-pane active" id="graphe">
@@ -45,28 +43,12 @@
                          <div id="buttongraph" class="btn-group"><button  class="btn btn-primary" onclick="return false;" ng-click="displayLine()">Graphe idéal</button><button onclick="return false;" class="btn btn-primary" ng-click="displayCircle()">Statistiques</button></div>
                                             </div>
                   <div class="tab-pane" id="Gmap"  >
-                    <a href="/Views/MapDetails.aspx"> >Map</a>
+                     <a href="/Views/MapPage.aspx"> <img src="../Content/font/flat-map.png" alt="..." class="img-circle"></a>
+
                   </div>
                     
                </div>
             </div>
 
         </div>
-     <div>
-                         
-         
-     </div>
-<%--   <div data-ng-controller="MapCtrl">--%>
-<%--       <section id="map" >--%>
-<%--  <div ui-map="myMap" ui-options="mapOptions" class="map-canvas"></div>--%>
-<%--</section>--%>
-<%--   </div>--%>
-<%--    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=onGoogleReady"></script>--%>
-<%--    <script>--%>
-<%--        function onGoogleReady() {--%>
-<%--         angular.bootstrap(document.getElementById("map"), ['ResultatsApp']);--%>
-<%--            alert("GoogleMap ready");--%>
-<%----%>
-<%--        }--%>
-<%--        </script>--%>
 </asp:Content>

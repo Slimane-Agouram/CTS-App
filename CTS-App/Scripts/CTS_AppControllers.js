@@ -1,5 +1,9 @@
 ﻿
-//////////////ANGULAR/////////////////////////
+//function initCall() {
+//    alert("Google maps api initialized.");
+//    angular.bootstrap(document.getElementById("map"), ['app.ui-map']);
+//}
+////////////////ANGULAR/////////////////////////
 
 var CTS_AppControllers = angular.module('CTS_AppControllers', ['angularCharts', 'ui.map']);
 
@@ -27,29 +31,6 @@ CTS_AppControllers.controller('ResultatController', ['$scope','$http','$timeout'
                 series: [],
                 data: []
             };
-
-//            $scope.data = {
-//			series: ['Sales', 'Income', 'Expense', 'Laptops', 'Keyboards'],
-//			data : [{
-//				x : "Sales",
-//				y: [100,500, 0],
-//				tooltip:"this is tooltip"
-//			},
-//			{
-//				x : "Not Sales",
-//				y: [300, 100, 100]
-//			},
-//			{
-//				x : "Tax",
-//				y: [351]
-//			},
-//			{
-//				x : "Not Tax",
-//				y: [54, 0, 879]
-//			}]     
-//		};
-
-            
 
         }, 100);
 
@@ -162,12 +143,24 @@ $scope.nomGraphe1 = "Graphe Ligne";
     };
 }]);
 
-CTS_AppControllers.controller('MapCtrl', ['$scope', function ($scope) {
-    $scope.mapOptions = {
-        center: new google.maps.LatLng( 35.784, -78.670),
-        zoom: 15,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    alert('in google map');
-}]);
-
+//var myAppModule = angular.module('app.ui-map', ['ui.map']);
+//myAppModule.controller('MapCtrl', ['$scope', '$http', function ($scope, $http) {
+//
+//    
+//    $scope.myMarkers = [];
+//
+//    $scope.map = {
+//        center: {
+//            latitude: 45,
+//            longitude: -73
+//        },
+//        zoom: 8
+//    };
+//
+//    $scope.mapOptions = {
+//        center: new google.maps.LatLng(35.784, -78.670),
+//        zoom: 15,
+//        mapTypeId: google.maps.MapTypeId.ROADMAP
+//    };
+//    
+//}]);

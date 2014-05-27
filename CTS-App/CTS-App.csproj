@@ -91,6 +91,7 @@
     <Content Include="Content\css\bootstrap-theme.min.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\daterangepicker-bs3.css" />
+    <Content Include="Content\font\flat-map.png" />
     <Content Include="Global.asax" />
     <Content Include="Referenced\AjaxMin.dll" />
     <Content Include="Scripts\angular-charts.js" />
@@ -110,6 +111,7 @@
     <Content Include="Scripts\jquery-2.1.1.min.js" />
     <Content Include="Scripts\maplace.js" />
     <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\MyMap.js" />
     <Content Include="Scripts\MyScript.js" />
     <Content Include="Scripts\ng-map.js" />
     <Content Include="Scripts\ui-bootstrap-tpls-0.11.0.min.js" />
@@ -119,7 +121,6 @@
     <Content Include="Views\AnomalieConnexion.aspx" />
     <Content Include="Views\DiagnosticRadio.aspx" />
     <Content Include="Views\Doc.aspx" />
-    <Content Include="Views\MapDetails.aspx" />
     <Content Include="Views\MapPage.aspx" />
     <Content Include="Views\Resultat.aspx" />
     <Content Include="Views\testMap.aspx" />
@@ -167,13 +168,6 @@
     </Compile>
     <Compile Include="Views\Doc.aspx.designer.cs">
       <DependentUpon>Doc.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\MapDetails.aspx.cs">
-      <DependentUpon>MapDetails.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\MapDetails.aspx.designer.cs">
-      <DependentUpon>MapDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\MapPage.aspx.cs">
       <DependentUpon>MapPage.aspx</DependentUpon>

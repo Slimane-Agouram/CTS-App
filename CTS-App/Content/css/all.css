@@ -68,3 +68,10 @@ grapheCircle {
  .map-canvas { height: 400px; }
 
  .angular-google-map-container { height: 400px; }
+
+ .img-circle {
+     height: 200px;
+     width: 200px;
+     margin-left: 200px;
+     margin-top: 100px;
+ }

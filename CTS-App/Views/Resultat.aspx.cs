@@ -35,5 +35,10 @@ namespace CTS_App.Views
 
 
         }
+
+        protected void DropdownListLigne_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("valeur: " + DropdownListLigne.SelectedValue);
+        }
     }
 }
