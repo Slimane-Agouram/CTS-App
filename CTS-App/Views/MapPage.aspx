@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/CTS-App.Master" AutoEventWireup="true" CodeBehind="MapPage.aspx.cs" Inherits="CTS_App.Views.MapPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-    <script src="../Scripts/MyMap.js"></script>
+<%--    <script src="../Scripts/MyMap.js"></script>--%>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <br/>
@@ -16,8 +16,9 @@
 
     }
 </script>
-
+    <script src="../Scripts/MyMap.js"></script>
     <div ng-app="Myapp">
+        
     <section  id="map" ng-cloak>
   <div class="jumbotron">
     <h2>Google Maps</h2>
@@ -30,7 +31,7 @@
         <ul class="list-unstyled">
           <li ng-repeat="marker in myMarkers">
             <a class="btn btn-default" ng-click="myMap.panTo(marker.getPosition())">
-              Pan to Marker {{$index}}
+              Aller au marqueur {{$index}}
             </a>
           </li>
         </ul>
@@ -63,6 +64,30 @@
     </div>
   </div>
         </section>
+        <table class="table table-striped" ng-controller="MapCtrl">
+            <tr>
+                <td>Ligne:</td>
+                <td><input type="text" data-ng-model="test"/></td>
+                
+            </tr>
+            <tr>
+                <td>Véhicule</td>
+                <td><input type="text"/></td>
+            </tr>
+            <tr>
+                <td>date de début:</td>
+                <td><input type="date" id="datedebut"/></td>
+            </tr>
+            <tr>
+                <td>date de fin:</td>
+                <td><input type="date" /></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td><button class="btn btn-primary" ng-click="check()" onclick="return false;">Valider</button></td>
+            </tr>
+        </table>
     </div>
 
 </asp:Content>
