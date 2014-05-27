@@ -116,11 +116,26 @@ $scope.nomGraphe1 = "Graphe Ligne";
             alert("Merci de spécifier tous les champs!");
 
         } else {
-            var dateDep = Date.parse($scope.dateDebut);
-            alert("Date debut: " + dateDep +"\n date fin: " + dateFin);
+            //            var dateDep = Date.parse($scope.dateDebut);
+//            var p1 = $scope.dateDebut.split('/');
+//            var dateDep = new Date(p1[0], p1[1], p1[2]);
+//            var p2 = $scope.dateFin.split('/');
+//
+//            var dateFin =new Date(p2[0], p2[1], p2[2]);
+          
             
-            var dateFin = Date.parse($scope.dateFin);
-            if (dateDep > dateFin) {
+   
+            var d1 = $scope.dateDebut.split('/');
+            var d2 = $scope.dateFin.split('/');
+            var db1 = new Date(d1[2], d1[1]-1, d1[0]);
+            var db2 = new Date(d2[2], d2[1]-1, d2[0]);
+
+
+            alert("1:" + db1 + " 2:" + db2);
+
+
+            
+            if (db1 > db2) {
                 alert("merci d'entrer un interval valide!");
             } else {
                 $http.get('../api/Cts/getGraph?dateDebut=' + $scope.dateDebut + '&dateFin=' + $scope.dateFin + '&ligne=' + $scope.ligne+'&vehicule=' + $scope.vehicule ).success(function(data) {
